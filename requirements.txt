@@ -1,43 +1,6 @@
-Role: You are an expert Python Developer specializing in Financial Engineering and the Streamlit framework.
-
-Task: Build a professional, repository-ready Stock Portfolio & AI Analysis Web App. This project will be hosted on GitHub, so the code must be clean, modular, and include necessary repository files.
-
-Core Requirements:
-
-Data Source & Reliability:
-
-Use yfinance as the primary data source.
-
-CRITICAL: Implement a get_google_finance_price fallback function using BeautifulSoup. If Yahoo Finance returns a YFRateLimitError or empty data, the app must automatically scrape the live price from Google Finance.
-
-Add a time.sleep(1.5) delay between all API calls to prevent IP blocking.
-
-Use a requests session with a Chrome User-Agent to mimic a real human browser.
-
-App Structure (Multi-Page Sidebar):
-
-Registration: Input for Ticker, Units Owned, and Purchase Price. Data must persist in a portfolio.json file.
-
-My Portfolio: Display a Total Portfolio Value metric at the top. The table should show: Ticker, Units, Live Price, and Total Value.
-
-AI Analysis Report: A table showing: Stock, Action (BUY MORE, HOLD, or SELL), and Predicted Gain ($). Include a "Simplified Reason" column (e.g., "Price is on a hot streak").
-
-Global Opportunities: A scanner for top stocks (TSLA, NVDA, AAPL, MSFT). Split results into "Strong Picks to Buy" and "Exit Signals (Time to Sell)".
-
-GitHub Readiness:
-
-Provide a requirements.txt file including streamlit, yfinance, pandas, beautifulsoup4, and scikit-learn.
-
-Ensure the code handles file paths correctly so it runs immediately when cloned from GitHub.
-
-Logic & Formatting:
-
-NO EMOJIS in headers or tables.
-
-Table Indexing: All row numbers must start at 1 (not 0).
-
-Currency Logic: Use ₹ for tickers ending in .NS or .BO; otherwise, use $.
-
-Action Logic: BUY MORE (growth > 1%), SELL (growth < -2%), HOLD (anything else).
-
-Error Handling: Use robust try-except blocks. If both Yahoo and Google fail, show a clean "Service Temporarily Unavailable" message instead of a crash.
+streamlit
+yfinance
+pandas
+beautifulsoup4
+requests
+scikit-learn
